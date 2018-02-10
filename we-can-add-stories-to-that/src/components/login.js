@@ -9,7 +9,6 @@ export default class Login extends React.Component {
         this.onSubmit = this.onSubmit.bind(this);
     }
   onSubmit(ev) {
-    console.log("in onsubmit");
       ev.preventDefault();
       const data = {
           username: document.getElementById('username').value,
