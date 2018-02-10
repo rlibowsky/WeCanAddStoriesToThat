@@ -49,18 +49,23 @@ module.exports = (app) => {
         }
     });
 
+
     // Handle GET to fetch user information
-    app.get('/v1/user/:username', function(req, res) {
-        let user = _.findWhere(app.users, { username: req.params.username.toLowerCase() });
-        if (!user) {
+    app.get('/v1/user', function(req, res) {
+        let data = req.body
+        //let user = _.findWhere(app.users, { username: req.params.username.toLowerCase() });
+        if (true) {
             res.status(404).send({ error: 'unknown user' });
         } else {
-            user = _.pick(user, 'username', 'first_name', 'last_name', 'city', 'primary_email');
-            user.games = app.games.map(game => {
-                let g = _.clone(game);
-                g.moves = g.moves ? g.moves.length : 0;
-                return g;
-            });
+            // user = _.pick(user, 'username', 'password', 'primary_email');
+            // if (!user.password != data.password) {
+            //     res.status(404).send({ error: 'incorrect password' });
+            // }
+            // user.games = app.games.map(game => {
+            //     let g = _.clone(game);
+            //     g.moves = g.moves ? g.moves.length : 0;
+            //     return g;
+            // });
             res.status(200).send(user);
         }
     });
