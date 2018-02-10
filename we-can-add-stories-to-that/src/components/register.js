@@ -29,7 +29,7 @@ export default class Register extends React.Component {
   }    
 
   render() {
-    const val = (this.state.hasError ? 'Please enter a valid username and password.' : ' ');
+    const val = (this.state.hasError ? 'That username or email is already taken.' : ' ');
     return (
     <Container>
       <Form id="registrationForm">
