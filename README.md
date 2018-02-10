@@ -1,4 +1,4 @@
-# Love at First Bite
+# Tid-er
 
 This site highlights our 2018 UnCommon Hacks Database work and can be found [here](https://www.google.com). 
 Please reach out through the site with any questions you might have.
