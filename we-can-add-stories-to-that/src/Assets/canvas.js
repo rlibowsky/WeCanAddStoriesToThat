@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 const width = 400
 const height = 400
 
-const drawLeftCheck = ( canvas, ctx ) => {
+const drawLeftCheck = ( canvas, ctx, color1, color2) => {
 	ctx.strokeRect(0, 0, width, height)
 	
 			ctx.beginPath()
@@ -28,7 +28,7 @@ const drawLeftCheck = ( canvas, ctx ) => {
 
 			ctx.closePath()
 			
-			ctx.fillStyle = "blue"
+			ctx.fillStyle = color1
 			ctx.fill()
 
 			// ROTATE
@@ -42,7 +42,7 @@ const drawLeftCheck = ( canvas, ctx ) => {
 			ctx.translate(canvas.width, canvas.height)
 			ctx.rotate(180 * Math.PI / 180)
 			ctx.drawImage(tempCanvas, 0, 0, canvas.width, canvas.height, 0, 0, canvas.width,canvas.height)
-			ctx.fillStyle = "red"
+			ctx.fillStyle = color2
 			ctx.fill()
 			ctx.restore()
 
@@ -55,7 +55,9 @@ class Canvas extends Component {
 		const canvas = this.refs.podCanvas
 		const ctx = canvas.getContext("2d")
 
-		drawLeftCheck(canvas, ctx)
+		const color1 = "blue"
+		const color2 = "red"
+		drawLeftCheck(canvas, ctx, color1, color2)
 
 		// ctx.rotate(45 * Math.PI / 180)
 		//ctx.save()

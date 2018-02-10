@@ -593,6 +593,118 @@ module.exports = function (css) {
 
 /***/ }),
 
+/***/ 117:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(11);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var width = 400;
+var height = 400;
+
+var drawLeftCheck = function drawLeftCheck(canvas, ctx, color1, color2) {
+	ctx.strokeRect(0, 0, width, height);
+
+	ctx.beginPath();
+
+	var topLeftCornerX = 0.125 * width;
+	var topLeftCornerY = 0.1 * height;
+
+	ctx.moveTo(topLeftCornerX, topLeftCornerY); // Top left corner
+	ctx.quadraticCurveTo(0.05 * width, 0.15 * height, 0.05 * width, 0.2 * height); // 2
+	ctx.moveTo(0.05 * width, 0.2 * height); // 3
+
+	var lowRightCornerX = 0.7 * width;
+	var lowRightCornerY = 0.5 * height;
+
+	// Bottom Curve
+	ctx.bezierCurveTo(0, height + .4 * height, width, height, lowRightCornerX, lowRightCornerY);
+	ctx.stroke();
+
+	// Middle Curve
+	ctx.quadraticCurveTo(0.25 * width, height, topLeftCornerX, topLeftCornerY);
+	ctx.stroke();
+
+	ctx.closePath();
+
+	ctx.fillStyle = color1;
+	ctx.fill();
+
+	// ROTATE
+	var tempCanvas = document.createElement("canvas"),
+	    tempCtx = tempCanvas.getContext("2d");
+	tempCanvas.width = canvas.width;
+	tempCanvas.height = canvas.height;
+	tempCtx.fillStyle = "red";
+	tempCtx.drawImage(canvas, 0, 0, canvas.width, canvas.height);
+	ctx.save();
+	ctx.translate(canvas.width, canvas.height);
+	ctx.rotate(180 * Math.PI / 180);
+	ctx.drawImage(tempCanvas, 0, 0, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
+	ctx.fillStyle = color2;
+	ctx.fill();
+	ctx.restore();
+};
+
+var Canvas = function (_Component) {
+	_inherits(Canvas, _Component);
+
+	function Canvas() {
+		_classCallCheck(this, Canvas);
+
+		return _possibleConstructorReturn(this, (Canvas.__proto__ || Object.getPrototypeOf(Canvas)).apply(this, arguments));
+	}
+
+	_createClass(Canvas, [{
+		key: "componentDidMount",
+		value: function componentDidMount() {
+			var canvas = this.refs.podCanvas;
+			var ctx = canvas.getContext("2d");
+
+			var color1 = "blue";
+			var color2 = "red";
+			drawLeftCheck(canvas, ctx, color1, color2);
+
+			// ctx.rotate(45 * Math.PI / 180)
+			//ctx.save()
+			//ctx.restore()
+		}
+	}, {
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement(
+				"div",
+				null,
+				_react2.default.createElement("canvas", { ref: "podCanvas", width: width, height: height })
+			);
+		}
+	}]);
+
+	return Canvas;
+}(_react.Component);
+
+exports.default = Canvas;
+
+/***/ }),
+
 /***/ 96:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -614,6 +726,10 @@ var _logo = __webpack_require__(111);
 var _logo2 = _interopRequireDefault(_logo);
 
 __webpack_require__(112);
+
+var _canvas = __webpack_require__(117);
+
+var _canvas2 = _interopRequireDefault(_canvas);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -638,27 +754,7 @@ var App = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'App' },
-        _react2.default.createElement(
-          'header',
-          { className: 'App-header' },
-          _react2.default.createElement('img', { src: _logo2.default, className: 'App-logo', alt: 'logo' }),
-          _react2.default.createElement(
-            'h1',
-            { className: 'App-title' },
-            'Welcome to React'
-          )
-        ),
-        _react2.default.createElement(
-          'p',
-          { className: 'App-intro' },
-          'To get started, edit ',
-          _react2.default.createElement(
-            'code',
-            null,
-            'src/App.js'
-          ),
-          ' and save to reloade'
-        )
+        _react2.default.createElement(_canvas2.default, null)
       );
     }
   }]);
