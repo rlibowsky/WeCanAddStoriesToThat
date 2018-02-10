@@ -29,32 +29,24 @@ module.exports = (app) => {
     app.post('/v1/user', function(req, res) {
         let data = req.body;
         console.log(data)
-        res.status(201).send({
-            username:   data.username,
-            primary_email: data.primary_email
-        })
-        /*
-        if (!data ||
-            !data.username ||
-            !data.password ||
-            !data.first_name ||
-            !data.last_name ||
-            !data.city ||
-            !data.primary_email) {
-            res.status(400).send({ error: 'username, password, first_name, last_name, city and primary_email required' });
-        } else {
-            let user = _.findWhere(app.users, { username: data.username.toLowerCase() });
+        if(!data||
+           !data.primary_email||
+           !data.username||
+           !data.password) {
+               res.status(400).send({ errror: 'username,password,primary email missing'})
+           }
+        else {
+            let user = _.findWhere(app.users, { username: data.username})
             if (user) {
-                res.status(400).send({ error: 'username already in use' });
+                res.status(400).send({ error: 'user exists'})
             } else {
-                let newUser = _.pick(data, 'username', 'first_name', 'last_name', 'password', 'city', 'primary_email');
-                app.users.push(newUser);
-                res.status(201).send({
-                    username:       data.username,
-                    primary_email:  data.primary_email
-                });
+            let newUser = _.pick(data, 'username', 'primary_email', 'password')
+            app.users.push(newUser)
+            res.status(201).send({
+                username: newUser.username
+            })
             }
-        } */
+        }
     });
 
     // Handle GET to fetch user information
