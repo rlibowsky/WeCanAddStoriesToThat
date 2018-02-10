@@ -50,22 +50,23 @@ module.exports = (app) => {
     });
 
 
-    // Handle GET to fetch user information
-    app.get('/v1/user', function(req, res) {
+    // Handle POST to fetch user information
+    app.post('/v1/session', function(req, res) {
+        console.log("printing app.users");
+        console.log(app.users);
         let data = req.body
-        //let user = _.findWhere(app.users, { username: req.params.username.toLowerCase() });
-        if (true) {
+        console.log("data is ");
+        console.log(data);
+        let user = _.findWhere(app.users, { username: data.username });
+        console.log("user info is:");
+        console.log(user);
+        if (!user) {
             res.status(404).send({ error: 'unknown user' });
         } else {
-            // user = _.pick(user, 'username', 'password', 'primary_email');
-            // if (!user.password != data.password) {
-            //     res.status(404).send({ error: 'incorrect password' });
-            // }
-            // user.games = app.games.map(game => {
-            //     let g = _.clone(game);
-            //     g.moves = g.moves ? g.moves.length : 0;
-            //     return g;
-            // });
+            user = _.pick(user, 'username', 'password', 'primary_email');
+            if (!user.password != data.password) {
+                res.status(404).send({ error: 'incorrect password' });
+            }
             res.status(200).send(user);
         }
     });

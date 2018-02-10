@@ -13,7 +13,7 @@ export default class Login extends React.Component {
           password: document.getElementById('password').value
       }
       /* validate the data */
-      axios.get('/v1/user', qs.stringify(data))
+      axios.post('/v1/session', qs.stringify(data))
       .then((res)=>{
           console.log(res)
       })
