@@ -5,8 +5,11 @@ import qs from 'qs';
 export default class Login extends React.Component {
     constructor(props) {
         super(props);
+        this.state = { hasError: false };
+        this.onSubmit = this.onSubmit.bind(this);
     }
   onSubmit(ev) {
+    console.log("in onsubmit");
       ev.preventDefault();
       const data = {
           username: document.getElementById('username').value,
@@ -14,16 +17,28 @@ export default class Login extends React.Component {
       }
       /* validate the data */
       axios.post('/v1/session', qs.stringify(data))
-      .then((res)=>{
-          console.log(res)
-      })
-      
+      .then(
+        (res)=>{
+          if (res.status == 401) {
+            console.log("found 401");
+            
+          }
+          else if (res.status == 200 || res.status == 200) {
+            console.log(res)
+            this.setState({ hasError: false});
+          }
+        }
+      ).catch((error)=> {
+        this.setState({ hasError: true});
+        document.getElementById("loginForm").reset();
+      });
   }    
 
   render() {
+    const val = (this.state.hasError ? 'Please enter a valid username and password.' : ' ');
     return (
     <Container>
-      <Form>
+      <Form id="loginForm">
         <FormGroup row>
           <Label for="username" sm={2}>Username</Label>
           <Col offset={3} sm={8}>
@@ -42,6 +57,7 @@ export default class Login extends React.Component {
           </Col>
         </FormGroup>
       </Form>
+      <h1> {val} </h1>
     </Container>
     );
   }

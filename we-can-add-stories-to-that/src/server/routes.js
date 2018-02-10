@@ -51,25 +51,25 @@ module.exports = (app) => {
 
 
     // Handle POST to fetch user information
-    app.post('/v1/session', function(req, res) {
-        console.log("printing app.users");
-        console.log(app.users);
-        let data = req.body
-        console.log("data is ");
-        console.log(data);
-        let user = _.findWhere(app.users, { username: data.username });
-        console.log("user info is:");
-        console.log(user);
-        if (!user) {
-            res.status(404).send({ error: 'unknown user' });
-        } else {
-            user = _.pick(user, 'username', 'password', 'primary_email');
-            if (!user.password != data.password) {
-                res.status(404).send({ error: 'incorrect password' });
-            }
-            res.status(200).send(user);
-        }
-    });
+    // app.post('/v1/session', function(req, res) {
+    //     console.log("printing app.users");
+    //     console.log(app.users);
+    //     let data = req.body
+    //     console.log("data is ");
+    //     console.log(data);
+    //     let user = _.findWhere(app.users, { username: data.username });
+    //     console.log("user info is:");
+    //     console.log(user);
+    //     if (!user) {
+    //         res.status(404).send({ error: 'unknown user' });
+    //     } else {
+    //         user = _.pick(user, 'username', 'password', 'primary_email');
+    //         if (!user.password != data.password) {
+    //             res.status(404).send({ error: 'incorrect password' });
+    //         }
+    //         res.status(200).send(user);
+    //     }
+    // });
 
     // Handle POST to create a new game
     app.post('/v1/game', function(req, res) {
