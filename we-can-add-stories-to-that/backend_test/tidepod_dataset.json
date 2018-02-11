@@ -5,7 +5,7 @@
         "name": "Billy Jean",
         "type": {
             "category": "TidePod",
-            "colortop": "0x0000",
+            "colortop": "0x00a20",
             "colorbottom": "0x0ab00",
             "caption1": "whats your opinion on these thots",
             "caption2": "When, in the course of human events, it becomes necessary for one people to dissolve the political bonds which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the laws of nature and of nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation.",
@@ -27,7 +27,7 @@
         "name": "Bob",
         "type": {
             "category": "TidePod",
-            "colortop": "0x0000",
+            "colortop": "0x0f60",
             "colorbottom": "0x0ab00",
             "caption1": "what in the world",
             "caption2": "wow check out this hard drive",
@@ -49,8 +49,8 @@
         "name": "SpaghettiBoii",
         "type": {
             "category": "TidePod",
-            "colortop": "0x0000",
-            "colorbottom": "0x0ab00",
+            "colortop": "0x0110",
+            "colorbottom": "0x0ab0f",
             "caption1": "damnnn she like a bowl of oatmeal",
             "caption2": "she thicccc with less c's than my transcript",
             "image1": "tbd",
@@ -71,8 +71,8 @@
         "name": "aaaaron",
         "type": {
             "category": "TidePod",
-            "colortop": "0x0000",
-            "colorbottom": "0x0ab00",
+            "colortop": "0x0abcd",
+            "colorbottom": "0x0ab0f",
             "caption1": "damnnn she like a bowl of oatmeal",
             "caption2": "she thicccc with less c's than my transcript",
             "image1": "tbd",
@@ -93,7 +93,7 @@
         "name": "UnCommonHacker",
         "type": {
             "category": "TidePod",
-            "colortop": "0x0000",
+            "colortop": "0x0eef",
             "colorbottom": "0x0ab00",
             "caption1": "she wildin out here",
             "caption2": "anchor down",
@@ -115,7 +115,7 @@
         "name": "WildChicago",
         "type": {
             "category": "TidePod",
-            "colortop": "0x0000",
+            "colortop": "0x11100",
             "colorbottom": "0x0ab00",
             "caption1": "she wildin out here",
             "caption2": "anchor down",
@@ -172,5 +172,49 @@
         "selflikes": [],
         "selfsuperlikes": ["helloworld", "Spaghettiboii", "Bruno Mars", "UnCommonHacker", "soylentlean", "goldpot joe", "aaaaron", "WildChicago", "whiteboardwakeboard"],
         "selfdislikes":[]
+    }
+}
+{
+    "product":
+    {
+        "id": "912345678",
+        "name": "carrot",
+        "type": {
+            "category": "TidePod",
+            "colortop": "0x0000",
+            "colorbottom": "0x0ab00",
+            "caption1": "an apple a day",
+            "caption2": "keeps the doctor away",
+            "image1": "tbd",
+            "image2": "tbd"
+        },
+        "tagline": "dont get cavities",
+        "description": "brush your teeth",
+        "inarea": [],
+        "selflikes": [],
+        "selfsuperlikes": [],
+        "selfdislikes":["Bob"]
+    }
+}
+{
+    "product":
+    {
+        "id": "123450000",
+        "name": "shape of water",
+        "type": {
+            "category": "TidePod",
+            "colortop": "0x0000",
+            "colorbottom": "0x0ab00",
+            "caption1": "wackin and smackin",
+            "caption2": "roll tide",
+            "image1": "tbd",
+            "image2": "tbd"
+        },
+        "tagline": "free the motherland",
+        "description": "Russia is our mother",
+        "inarea": [],
+        "selflikes": ["aaaaron"],
+        "selfsuperlikes": ["helloworld"],
+        "selfdislikes":[ "WildChicago"]
     }
 }
