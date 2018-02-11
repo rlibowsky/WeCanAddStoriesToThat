@@ -18,7 +18,7 @@ export default class Register extends React.Component {
       /* validate the data */
       axios.post('/v1/user', qs.stringify(data))
       .then((res)=>{
-          if (res.status == 200) {
+          if (res.status === 200) {
             this.setState({ hasError: false});
             // move on to another page
           }

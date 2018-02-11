@@ -18,11 +18,10 @@ export default class Login extends React.Component {
       axios.post('/v1/session', qs.stringify(data))
       .then(
         (res)=>{
-          if (res.status == 401) {
+          if (res.status === 401) {
             console.log("found 401");
-            
           }
-          else if (res.status == 200 || res.status == 200) {
+          else if (res.status === 200 || res.status === 200) {
             console.log(res)
             this.setState({ hasError: false});
           }
