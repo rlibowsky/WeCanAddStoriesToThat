@@ -3,56 +3,174 @@
     {
         "id": "123456789",
         "name": "Billy Jean",
-        "type": "TidePod",
+        "type": {
+            "category": "TidePod",
+            "colortop": "0x0000",
+            "colorbottom": "0x0ab00",
+            "caption1": "whats your opinion on these thots",
+            "caption2": "When, in the course of human events, it becomes necessary for one people to dissolve the political bonds which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the laws of nature and of nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation.",
+            "image1": "tbd",
+            "image2": "tbd"
+        },
         "tagline": "out here bein wild",
         "description": "im a bad bitch in a sea of basic hoes",
-        
         "inarea": [],
-        
         "selflikes": ["Bob", "shawty phil", "Taylor Swift", "carrot"],
-        "elselikes": ["Bob", "Spaghettiboii", "goldpot joe", "potato man", "orange dictator"],
         "selfsuperlikes": ["helloworld", "Spaghettiboii", "Bruno Mars", "UnCommonHacker"],
-        "elsesuperliked": ["helloworld", "shawty phil", "aaaaron", "daddyphil"],
-        "selfdislikes":["soylentlean", "goldpot joe", "aaaaron", "WildChicago", "whiteboardwakeboard" ],
-        "elsedislikes": ["soylentlean", "Bruno Mars", "Taylor Swift"]
+        "selfdislikes":["soylentlean", "goldpot joe", "aaaaron", "WildChicago", "whiteboardwakeboard" ]
     }
 }
 {
-    "user":
+    "product":
     {
-        "name": "Billy Jean",
-        "id": "123456789",
-        "selflikes": ["Bob", "shawty phil", "Taylor Swift"],
-        "elselikes": ["Spaghettiboii", "goldpot joe", "potato man"],
-        "selfsuperlikes": ["helloworld", "Spaghettiboii", "Bruno Mars"],
-        "elsesuperliked": ["helloworld", "shawty phil", "aaaaron"]
+        "id": "234567891",
+        "name": "Bob",
+        "type": {
+            "category": "TidePod",
+            "colortop": "0x0000",
+            "colorbottom": "0x0ab00",
+            "caption1": "what in the world",
+            "caption2": "wow check out this hard drive",
+            "image1": "tbd",
+            "image2": "tbd"
+        },
+        "tagline": "no fake no blank",
+        "description": "catch me drifting",
+        "inarea": [],
+        "selflikes": ["shawty phil", "whiteboardwakeboard", "Spaghettiboii",, "carrot"],
+        "selfsuperlikes": ["helloworld", , "Bruno Mars", "WildChicago", "UnCommonHacker"],
+        "selfdislikes":["Billy Jean", "goldpot joe", "aaaaron", "Taylor Swift" ]
     }
 }
 {
-    "user":
+    "product":
     {
-        "name": "",
-        "id": "123456789",
-        "selflikes": ["", "", ""],
-        "elselikes": ["", "goldpot joe", "potato man"],
-        "selfsuperlikes": ["helloworld", "Spaghettiboii", "Bruno Mars"],
-        "elsesuperliked": ["helloworld", "shawty phil", "aaaaron"]
+        "id": "345678912",
+        "name": "SpaghettiBoii",
+        "type": {
+            "category": "TidePod",
+            "colortop": "0x0000",
+            "colorbottom": "0x0ab00",
+            "caption1": "damnnn she like a bowl of oatmeal",
+            "caption2": "she thicccc with less c's than my transcript",
+            "image1": "tbd",
+            "image2": "tbd"
+        },
+        "tagline": "shawty looking like a snack",
+        "description": "damn fine",
+        "inarea": [],
+        "selflikes": ["Bob",  "Taylor Swift", "Billy Jean","carrot", "Billy Jean"],
+        "selfsuperlikes": ["helloworld", "aaaaron"],
+        "selfdislikes":["shawty phil", "goldpot joe", "Bruno Mars","UnCommonHacker", "WildChicago", "whiteboardwakeboard" ]
     }
 }
-
-{"address": 
+{
+    "product":
     {
-        "building": "1007", 
-        "coord": [-73.856077, 40.848447], 
-        "street": "Morris Park Ave", 
-        "zipcode": "10462"}, 
-        "borough": "Bronx", 
-        "cuisine": "Bakery", 
-        "grades": [{"date": {"$date": 1393804800000}, "grade": "A", "score": 2}, 
-            {"date": {"$date": 1378857600000}, "grade": "A", "score": 6}, 
-            {"date": {"$date": 1358985600000}, "grade": "A", "score": 10}, 
-            {"date": {"$date": 1322006400000}, "grade": "A", "score": 9}, 
-            {"date": {"$date": 1299715200000}, "grade": "B", "score": 14}], 
-        "name": "Morris Park Bake Shop", 
-        "restaurant_id": "30075445"
+        "id": "456789123",
+        "name": "aaaaron",
+        "type": {
+            "category": "TidePod",
+            "colortop": "0x0000",
+            "colorbottom": "0x0ab00",
+            "caption1": "damnnn she like a bowl of oatmeal",
+            "caption2": "she thicccc with less c's than my transcript",
+            "image1": "tbd",
+            "image2": "tbd"
+        },
+        "tagline": "tide pods rule",
+        "description": "i need an internship",
+        "inarea": [],
+        "selflikes": ["Taylor Swift", "Billy Jean", ,"carrot", "Billy Jean"],
+        "selfsuperlikes": ["helloworld", "SpaghettiBoii", "goldpot joe"],
+        "selfdislikes":["shawty phil", "Bruno Mars", "UnCommonHacker", "Bob", "WildChicago", "whiteboardwakeboard" ]
     }
+}
+{
+    "product":
+    {
+        "id": "567891234",
+        "name": "UnCommonHacker",
+        "type": {
+            "category": "TidePod",
+            "colortop": "0x0000",
+            "colorbottom": "0x0ab00",
+            "caption1": "she wildin out here",
+            "caption2": "anchor down",
+            "image1": "tbd",
+            "image2": "tbd"
+        },
+        "tagline": "All hail lord and savior Zeppos",
+        "description": "May his honor reign forevermore",
+        "inarea": [],
+        "selflikes": [ "aaaaron", "Billy Jean", ,"carrot", "Billy Jean"],
+        "selfsuperlikes": ["helloworld", "Bruno Mars", "SpaghettiBoii", "whiteboardwakeboard", "goldpot joe", "Taylor Swift"],
+        "selfdislikes":["shawty phil", "Bob", "WildChicago" ]
+    }
+}
+{
+    "product":
+    {
+        "id": "678912345",
+        "name": "WildChicago",
+        "type": {
+            "category": "TidePod",
+            "colortop": "0x0000",
+            "colorbottom": "0x0ab00",
+            "caption1": "she wildin out here",
+            "caption2": "anchor down",
+            "image1": "tbd",
+            "image2": "tbd"
+        },
+        "tagline": "All hail lord and savior Zeppos",
+        "description": "May his honor reign forevermore",
+        "inarea": [],
+        "selflikes": [ "aaaaron", "shawty phil", "Bob",  "Billy Jean"],
+        "selfsuperlikes": ["helloworld", "SpaghettiBoii"],
+        "selfdislikes":[ "WildChicago", "Billy Jean","carrot"]
+    }
+}
+{
+    "product":
+    {
+        "id": "789123456",
+        "name": "aaaaron",
+        "type": {
+            "category": "TidePod",
+            "colortop": "0x0000",
+            "colorbottom": "0x0ab00",
+            "caption1": "roll tide",
+            "caption2": "GoT is GOAT",
+            "image1": "tbd",
+            "image2": "tbd"
+        },
+        "tagline": "this is a test",
+        "description": "404 ERROR",
+        "inarea": [],
+        "selflikes": ["carrot", "Billy Jean"],
+        "selfsuperlikes": [],
+        "selfdislikes":["Bob"]
+    }
+}
+{
+    "product":
+    {
+        "id": "891234567",
+        "name": "anon_testcaseEdge",
+        "type": {
+            "category": "TidePod",
+            "colortop": "0x0000",
+            "colorbottom": "0x0ab00",
+            "caption1": "4chan the hacker",
+            "caption2": "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable rights, that among these are life, liberty and the pursuit of happiness. That to secure these rights, governments are instituted among men, deriving their just powers from the consent of the governed. That whenever any form of government becomes destructive to these ends, it is the right of the people to alter or to abolish it, and to institute new government, laying its foundation on such principles and organizing its powers in such form, as to them shall seem most likely to effect their safety and happiness. Prudence, indeed, will dictate that governments long established should not be changed for light and transient causes; and accordingly all experience hath shown that mankind are more disposed to suffer, while evils are sufferable, than to right themselves by abolishing the forms to which they are accustomed. But when a long train of abuses and usurpations, pursuing invariably the same object evinces a design to reduce them under absolute despotism, it is their right, it is their duty, to throw off such government, and to provide new guards for their future security.",
+            "image1": "tbd",
+            "image2": "tbd"
+        },
+        "tagline": "Such has been the patient sufferance of these colonies; and such is now the necessity which constrains them to alter their former systems of government. The history of the present King of Great Britain is a history of repeated injuries and usurpations, all having in direct object the establishment of an absolute tyranny over these states. To prove this, let facts be submitted to a candid0 world.",
+        "description": "He has refused his assent to laws, the most wholesome and necessary for the public good. He has forbidden his governors to pass laws of immediate and pressing importance, unless suspended in their operation till his assent should be obtained; and when so suspended, he has utterly neglected to attend to them. He has refused to pass other laws for the accommodation of large districts of people, unless those people would relinquish the right of representation in the legislature, a right inestimable to them and formidable to tyrants only. He has called together legislative bodies at places unusual, uncomfortable, and distant from the depository of their public records, for the sole purpose of fatiguing them into compliance with his measures.",
+        "inarea": [],
+        "selflikes": [],
+        "selfsuperlikes": ["helloworld", "Spaghettiboii", "Bruno Mars", "UnCommonHacker", "soylentlean", "goldpot joe", "aaaaron", "WildChicago", "whiteboardwakeboard"],
+        "selfdislikes":[]
+    }
+}
