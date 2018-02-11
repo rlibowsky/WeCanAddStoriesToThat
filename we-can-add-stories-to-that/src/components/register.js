@@ -5,7 +5,8 @@ import qs from 'qs';
 export default class Register extends React.Component {
     constructor(props) {
         super(props);
-        
+        this.state = { hasError: false };
+        this.onSubmit = this.onSubmit.bind(this);
     }
   onSubmit(ev) {
       ev.preventDefault();
@@ -17,17 +18,21 @@ export default class Register extends React.Component {
       /* validate the data */
       axios.post('/v1/user', qs.stringify(data))
       .then((res)=>{
-          console.log("hey")
-          console.log(res)
-      })
-      
+          if (res.status === 200) {
+            this.setState({ hasError: false});
+            // move on to another page
+          }
+      }).catch((error)=> {
+        this.setState({ hasError: true});
+        document.getElementById("registrationForm").reset();
+      });
   }    
 
   render() {
-      console.log(this.state)
+    const val = (this.state.hasError ? 'That username or email is already taken.' : ' ');
     return (
     <Container>
-      <Form>
+      <Form id="registrationForm">
         <FormGroup row>
           <Label for="username" sm={2}>Username</Label>
           <Col offset={3} sm={8}>
@@ -52,6 +57,7 @@ export default class Register extends React.Component {
           </Col>
         </FormGroup>
       </Form>
+      <h1> {val} </h1>
     </Container>
     );
   }
